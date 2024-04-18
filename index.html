@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h3>Ilham Rafi Fadhilah Bookshelf Apps</h3>
+    </header>
+    <main>
+      <div class="contents">
+        <div class="child-content" id="book-form">
+          <h3>Masukan Buku Baru</h3>
+          <form action="" id="form-data-book">
+            <div class="form-element">
+              <label for="title">Judul </label><br />
+              <input type="text" name="title" id="inputTitle" required />
+            </div>
+            <div class="form-element">
+              <label for="author">Penulis </label><br />
+              <input type="text" name="author" id="inputAuthor" required />
+            </div>
+            <div class="form-element">
+              <label for="year">Tahun </label><br />
+              <input type="number" name="year" id="inputYear" required />
+            </div>
+            <div class="form-element">
+              <label for="isComplete">Selesai dibaca: </label>
+              <input type="checkbox" id="inputIsComplete" />
+            </div>
+            <div class="form-element">
+              <input type="submit" name="" id="buttonSubmit" value="SIMPAN" />
+            </div>
+          </form>
+        </div>
+        <div class="child-content">
+          <h3>Belum selesai dibaca</h3>
+          <div class="list-book" id="books"></div>
+        </div>
+        <div class="child-content">
+          <h3>Selesai dibaca</h3>
+          <div class="list-book" id="completed-books"></div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </main>
+    <div id="deleteDialog" class="modal">
+      <div class="modal-content">
+        <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+        <div>
+          <button id="cancelDelete">Batal</button>
+          <button id="confirmDelete">Hapus</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
